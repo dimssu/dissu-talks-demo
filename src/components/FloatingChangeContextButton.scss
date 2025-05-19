@@ -1,0 +1,35 @@
+.floating-change-context-btn {
+  position: fixed;
+  right: 28px;
+  top: 12px;
+  z-index: 1301;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #fff;
+  color: #8e24aa;
+  border: 2px solid #8e24aa;
+  box-shadow: 0 2px 8px #8e24aa22;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+  font-size: 0;
+  outline: none;
+  animation: smoothPulse 2.5s ease-in-out infinite;
+  transform-origin: center;
+  will-change: transform;
+
+  &:hover,
+  &:focus {
+    background: #f3e5f5;
+    animation: none;
+  }
+}
+
+@keyframes smoothPulse {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
