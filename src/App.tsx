@@ -19,6 +19,12 @@ function App() {
     }
   }, [])
 
+  // Helper to build the full context for the bot
+  function buildBotContext(userContext: string) {
+    if (!userContext) return ''
+    return `You are an expert AI assistant for a website with the following purpose: "${userContext}". Always answer as if you are the assistant for this website, using its features and purpose to help the user.\n` + userContext
+  }
+
   const handleSelectContext = async (ctx: string) => {
     setContext(ctx)
     setHasClickedChatbot(true)
