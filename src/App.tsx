@@ -1,10 +1,10 @@
 import './App.css'
 import { useState, useEffect } from 'react'
-import { ChatBot } from 'dissu-talks/src/components/ChatBot'
 import { ContextSelector } from './ContextSelector'
 import { FloatingChangeContextButton } from './components/FloatingChangeContextButton'
 import { LottieChatbotArrow } from './components/LottieChatbotArrow'
 import { extractAccentColor, getContrastTextColor } from './utils/color'
+import ChatBot from 'cha-ai'
 
 function App() {
   const [context, setContext] = useState('')
