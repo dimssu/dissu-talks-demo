@@ -117,8 +117,9 @@ function App() {
             sandbox="allow-scripts allow-same-origin"
           />
           <FloatingChangeContextButton onClick={handleChangeContext} />
+          
           {/* Using chatbot from cha-ai */}
-          <ChatBot
+          {/* <ChatBot
             directLlmConfig={{
               apiEndpoint: `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${import.meta.env.VITE_GEMINI_API_KEY}`,
               apiKey: import.meta.env.VITE_GEMINI_API_KEY, 
@@ -148,7 +149,7 @@ function App() {
             styling={{ widgetColor: chatbotColor, textColor: chatbotTextColor }}
             theme="light"
             placeholderText="Ask your question..."
-          />
+          /> */}
         </div>
       )}
     </>
