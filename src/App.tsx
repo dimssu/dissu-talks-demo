@@ -150,6 +150,17 @@ function App() {
             theme="light"
             placeholderText="Ask your question..."
           /> */}
+          <ChatBot
+            llmProvider="gemini"
+            apiKey={import.meta.env.VITE_GEMINI_API_KEY}
+            context={context === '' ? 'This is a chatbot for application which is a guide for a user to use the chat bot application, ask the user for context about their chat bot.' : buildBotContext(context)}
+            responseType="formal"
+            position="bottom-right"
+            welcomeMessage="Welcome! Ask me anything."
+            styling={{ widgetColor: chatbotColor, textColor: chatbotTextColor }}
+            theme="light"
+            placeholderText="Ask your question..."
+          />
         </div>
       )}
     </>
